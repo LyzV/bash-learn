@@ -1,0 +1,11 @@
+#! /bin/bash
+
+for file in $(ls -a) ; do
+	if [ $file = $1 ]; then
+		echo "Find file: $file"
+		exit 0
+	fi
+done
+
+echo "Nothing found"
+exit 1
