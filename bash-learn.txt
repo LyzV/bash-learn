@@ -1,0 +1,6 @@
+стр 150
+Использование переменных среды Linux
+стр 175. Основные сведения о правах доступа к файлам Linux
+стр 186. Использование групп Linux
+
+repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b dizzy
