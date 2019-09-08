@@ -1,0 +1,46 @@
+#! /bin/bash
+
+# filter="/dev/sd[a-z][0-9] /media/${USER}/*"
+
+# IFS_OLD=$IFS
+# IFS=$'\n'
+# for line in `cat $1`
+# do
+# 	if [[ $line == $filter ]]; then
+# 		IFS=$' '
+# 		read -ra sublines <<< $line
+# 		device=${sublines[0]}
+# 		mount_point=${sublines[1]}
+# 		echo Device $device mounted to point $mount_point
+# 	fi
+# done
+# IFS=$IFS_OLD
+
+
+
+mount_list()
+{
+	local ret=""
+	local filter="/dev/sd[a-z][0-9] /media/${USER}/*"
+	IFS_OLD=$IFS
+	IFS=$'\n'
+	for line in `cat /proc/mounts`
+	do
+		if [[ $line == $filter ]]; then
+			IFS=$' '
+			read -ra sublines <<< $line
+			ret="${ret} ${sublines[0]} ${sublines[1]}"
+		fi
+	done
+	IFS=$IFS_OLD	
+	echo $ret
+}
+
+
+main()
+{
+	local list="$(mount_list)"
+	echo $list
+}
+
+main

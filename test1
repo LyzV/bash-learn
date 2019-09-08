@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo -n 'Date and time is: '
+date
+whoami

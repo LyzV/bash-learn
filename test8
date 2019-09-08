@@ -1,0 +1,31 @@
+#! /bin/bash
+
+str_equel()
+{
+	if [ "$1" = "$2" ]; then
+		return 0
+	fi
+	return 1
+}
+
+str_nequel()
+{
+	if [ "$1" != "$2" ]; then
+		return 0
+	fi
+	return 1
+}
+
+str_empty()
+{
+	if [ -z $1 ]; then
+		return 0
+	fi
+	return 1
+}
+
+if str_empty $1; then
+	echo 'String empty'
+else
+	echo 'String does not empty'
+fi

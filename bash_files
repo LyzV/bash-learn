@@ -1,0 +1,21 @@
+#! /bin/bash
+
+user=$*
+
+my_func "one two tree"
+
+if [ -z $user ]
+then
+	user=lyzv
+fi
+
+if grep $user /etc/passwd ;then
+	passwd_line=`grep $user /etc/passwd`
+	IFS=':' read -ra passwd_info <<< "$passwd_line"
+	user=${passwd_info[0]}; echo "User's NAME: ${user}"
+	uid=${passwd_info[2]}; echo "User's UID: ${uid}"
+	guid=${passwd_info[3]}; echo "User's GUID: $[guid]"
+	echo
+	echo "User's bash-files:"
+	ls -la /home/${user}/.b*
+fi

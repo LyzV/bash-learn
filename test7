@@ -1,0 +1,12 @@
+#! /bin/bash
+
+var1=$1
+var2=$2
+
+if [ $var1 -eq $var2 ]; then
+	echo 'Variables are equel'
+elif [ $var1 -gt $var2 ]; then
+	echo 'First variable more second one'
+else
+	echo 'Second variable more first one'
+fi

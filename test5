@@ -1,0 +1,16 @@
+#! /bin/bash
+
+color=$*
+
+if [ "$color" == "red" ]
+then
+	echo 'Red color'
+elif [ "$color" == "blue" ]
+then
+	echo 'Blue color'
+elif [ "$color" == "green" ]
+then
+	echo 'Green color'
+else
+	echo 'Another color'
+fi

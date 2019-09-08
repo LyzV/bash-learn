@@ -1,0 +1,7 @@
+#! /bin/bash
+
+v1=1.38
+v2=78.32
+
+v3=`echo "scale=6; $v1/$v2" | bc`
+echo $v3

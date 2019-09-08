@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# отображение информации о пользователе.
+echo "User info for userid: $USER"
+echo UID: $UID
+echo HOME: $HOME

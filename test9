@@ -1,0 +1,14 @@
+#! /bin/bash
+
+
+if [ -f $1 ] && [ -r $1 ] && [ -w $1 ] && [ -s $1 ]; then
+	echo File $1 is present
+else
+	echo File $1 is absent
+fi
+
+# if [ -d $1 ]; then
+# 	echo Catalog $1 is present
+# else
+# 	echo Catalog $1 is absent
+# fi

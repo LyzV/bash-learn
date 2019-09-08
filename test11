@@ -1,0 +1,8 @@
+#! /bin/bash
+
+case $1 in
+red) echo 'Color is red';;
+blue) echo 'Color is blue';;
+green) echo 'Color is green';;
+*) echo 'Uncknown color';;
+esac

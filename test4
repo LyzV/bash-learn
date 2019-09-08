@@ -1,0 +1,7 @@
+#! /bin/bash
+
+#if ls -la $*
+if asdlf
+then
+	echo File present!
+fi

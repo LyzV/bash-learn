@@ -1,0 +1,5 @@
+#! /bin/bash
+
+if [[ $* == .b* ]]; then
+	echo 'kdlsfjslkdj'
+fi
